@@ -1,0 +1,72 @@
+{
+  "name": "scottvincent/sv-bedrock",
+  "type": "project",
+  "license": "MIT",
+  "description": "Scotts Wordpress Bedrock starting point",
+  "homepage": "https://localhost/sv-bedrock/web/",
+  "authors": [
+    {
+      "name": "Scott Vincent",
+      "email": "contact@scottvincent.ca",
+      "homepage": "https://github.com/scottvincent"
+    }
+  ],
+  "keywords": [
+    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/scottvincent/sv-bedrock/issues"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type":"package",
+      "package": {
+        "name": "scottvincent/sv-theme",
+        "type": "wordpress-theme",
+        "version":"1.0.0",
+        "source": {
+            "url": "https://github.com/scottvincent/sv-theme.git",
+            "type": "git",
+            "reference":"master"
+          }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "^1.4",
+    "vlucas/phpdotenv": "^2.0.1",
+    "oscarotero/env": "^1.1.0",
+    "roots/wordpress": "5.0.2",
+    "roots/wp-config": "1.0.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "scottvincent/sv-theme": "1.0.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.0.2",
+    "roave/security-advisories": "dev-master"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "test": [
+      "phpcs"
+    ]
+  }
+}
