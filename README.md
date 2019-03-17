@@ -15,7 +15,7 @@ Copy `.htaccess.default` file to `.htaccess`
 ## Project Root
 `composer install`
 
-## Theme Folder `src/app/sv-theme`
+## Theme Folder `web/app/sv-theme`
 Pull latest. 
 `npm install`
 `npm run build`
