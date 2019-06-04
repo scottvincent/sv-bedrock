@@ -19,7 +19,9 @@
     "url": "https://github.com/scottvincent/sv-bedrock/issues"
   },
   "homepage": "https://github.com/scottvincent/sv-bedrock#readme",
-  "dependencies": {},
+  "dependencies": {
+    "story2sketch": "^1.6.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@storybook/addon-a11y": "^5.0.11",

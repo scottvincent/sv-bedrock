@@ -19,6 +19,7 @@ Copy `.htaccess.default` file to `.htaccess`
 `yarn`
 To run it: `yarn storybook`
 To build it and visit at `/storybook-static/`: `yarn build-storybook`
+To export to sketch: https://github.com/chrisvxd/story2sketch
 
 ## Theme Folder `web/app/sv-theme`
 `cd web/app/themes/sv-theme`
